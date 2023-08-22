@@ -8,21 +8,21 @@ class SimuladorDeDado:
         self.valor_maximo = 6
         self.mensagem = 'Você gostaria de gerar um novo valor?'
         # Layout n ta sendo lido
-        layout = [
+        self.layout = [
             [sg.Text('Jogar o dado?')],
             [sg.Button('Sim'),sg.Button('Não')]
         ]
         
     def Iniciar(self):
         # Create a Windows
-        janela = sg.Window('Simulador de Dado', layout=layout)
+        self.janela = sg.Window('Simulador de Dado', layout=self.layout)
         # Ler os valores da tela
-        self.eventos, self.valores = janela.Read()
-        resposta = input(self.mensagem).upper()
+        self.eventos, self.valores = self.janela.read()
+        
         try:
-            if resposta == "SIM" or resposta == 'S':
+            if self.eventos == "Sim" or self.eventos == 'S':
                 self.GerarValorDoDado()
-            elif resposta == "NÃO" or resposta == "N":
+            elif self.eventos == "Não" or self.eventos == "N":
                 print("Ok,Obrigado")
             else:
                 print("Por favor,Digite Sim ou Não")
