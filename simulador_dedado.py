@@ -1,5 +1,4 @@
 import random
-import PySimpleGUI
 import PySimpleGUI as sg
 
 class SimuladorDeDado:
