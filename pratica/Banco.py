@@ -41,14 +41,14 @@ class conta_poupanca(Banco):
 
 
 
-nome2 = str(input("Qual o seu nome? "))
-cpf2 = str(input("Seu CPF: "))
-saldo2 = float(input("Deposito: "))
+nome = str(input("Qual o seu nome? "))
+cpf = str(input("Seu CPF: "))
+saldo = float(input("Deposito: "))
 
 confi =str(input("Conta corrente ou Poupança?  [C/P] ")).upper()
 if confi == "C":
-    usuario = conta_corrente(cpf2, nome2, saldo2)
+    usuario = conta_corrente(cpf, nome, saldo)
     usuario.abrir_c()
 elif confi == "P":
-    usuario = conta_poupanca(cpf2, nome2, saldo2)
+    usuario = conta_poupanca(cpf, nome, saldo)
     usuario.abrir_p()
