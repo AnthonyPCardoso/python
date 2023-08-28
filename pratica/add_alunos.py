@@ -26,10 +26,10 @@ def main():
 
     while True:
         print("\nMenu:")
-        print("1. Adicionar aluno")
-        print("2. Remover aluno")
-        print("3. Ver alunos")
-        print("4. Sair")
+        print("1.Adicionar aluno")
+        print("2.Remover aluno")
+        print("3.Ver alunos")
+        print("4.Sair")
         choice = input("Digite o número de sua escolha: ")
 
         if choice == "1":
