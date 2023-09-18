@@ -1,0 +1,11 @@
+<incrementador>:
+    orientation: 'vertical'
+    Button:
+        text:  'TEstando'
+        font_size: 20
+        on_release:  label.text = str(int(label.text)+1)
+
+    Label:
+        id:label
+        text:'1'
+        font_size: 20
