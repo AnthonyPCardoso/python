@@ -14,12 +14,12 @@ class conta_corrente(Banco):
         self.sac = str(input("Conta corrente aberta,Deseja sacar?[S/N] ")).upper()
         while True:
             if self.sac == 'S':
-                self.valor = float(input("Quando deseja sacar? "))
+                self.valor = float(input("Quando deseja sacar? R$"))
                 self.total = self.saldo - self.valor
                 if self.valor > self.saldo:
                     print("Você não tem essa quantia no banco.Tente outro valor")
                     continue
-                print(f"Foi feito um saque de {self.valor},o seu saldo atual é {self.total}")
+                print(f"Foi feito um saque de R${self.valor},o seu saldo atual é R${self.total}")
                 break
             elif self.sac == 'N':
                 print(f"Ok, {self.nome} Até a próxima")
@@ -37,7 +37,7 @@ class conta_poupanca(Banco):
     def abrir_p(self):
         print('Conta Poupança aberta!')
         self.juros = self.saldo + (self.saldo *  6/100)
-        print(f"Com o juros de 6% ao ano, mantendo esse valor seu novo saldo será {self.juros}")
+        print(f"Com o juros de 6% ao ano, mantendo esse valor seu novo saldo será R${self.juros}")
 
 
 
